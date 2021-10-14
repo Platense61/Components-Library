@@ -4,10 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Components Library</title>
     <link rel="stylesheet" href="CSS/style.css">
   </head>
   <body>
-	<script src="index.js"></script>
+	   <header>
+       <b>Components Library</b>
+     </header>
+     <hr>
+     <!--split nav item -->
+     <p>Navigation Menu 1</p>
+     <ul class="container">
+    <li>
+        <a href="">...</a>
+    </li>
+
+    <li>
+        <a href="">...</a>
+    </li>
+    <!-- Navigation item that sticks to the right -->
+    <li class="container__item--right">
+        <a href="">...</a>
+    </li>
+    </ul>
+
+    <!-- Navigation menu #2-->
+    <p>Navigation Menu 2</p>
+    <ul class="dropdown">
+    <li>Home</li>
+    <li>
+        <div>Patterns</div>
+        <!-- First level sub dropdown -->
+        <ul>
+            <li>Layout</li>
+            <li>Input</li>
+            <li>
+                <div>Navigation</div>
+                <!-- Second level sub dropdown -->
+                <ul>
+                    <li>Breadcrumb</li>
+                    <li>Dropdown</li>
+                    <li>Menu</li>
+                    <li>Nested dropdown</li>
+                </ul>
+            </li>
+            <li>Display</li>
+            <li>Feedback</li>
+        </ul>
+      </li>
+      <li>Products</li>
+      <li>About</li>
+    </ul>
+
   </body>
 </html>
