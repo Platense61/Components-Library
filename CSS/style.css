@@ -6,7 +6,7 @@ body{
 }
 p{
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 header{
@@ -263,65 +263,203 @@ transition: all .3s
                         flex: 1;
                     }
 
-.typography-container{
+.typeography-container{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 3rem;
 }
 
 /* 1st typography retro */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+.gradient-wrapper{
+  flex-basis: 50%;
+}
+article {
+  background: linear-gradient(
+    to right,
+    hsl(98 100% 62%),
+    hsl(204 100% 59%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-.type1 {
-  position: absolute;
+h1 {
+  font-size: 5vmin;
+  line-height: 1.1;
+}
+
+h1, {
+  margin: 0;
+}
+
+p {
+  font-family: "Dank Mono", ui-monospace, monospace;
+}
+
+/* Typography 2*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+body{
+  background:black;
+}
+
+.pop-wrapper{
+  flex-basis: 50%;
+}
+.pop{
   transform: translate(-50%, -50%);
-  color: #cf1b1b;
-  font-size: 124px;
-  letter-spacing: 8px;
-  cursor: pointer;
+  font-size:80px;
+	letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow:
+						8px 8px #ff1f8f,
+						20px 20px #000000;
 }
 
-.type1::before {
-  content: "PRATHAM";
-  position: absolute;
+/* typeography 3 */
+:root {
+  --shadow-color: #FF9E9E;
+  --shadow-color-light: white;
+}
+
+.logo-1 {
+  flex-basis: 50%;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Archivo Black", "Archivo", sans-serif;
+  font-weight: normal;
+  color: white;
+  animation: neon 3s infinite;
+  margin-top: 3rem;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+
+/* typeography 4 */
+
+.deconstructed {
+  position: relative;
+  margin: auto;
+  height: 0.71em;
   color: transparent;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent 0,
-    transparent 2px,
-    white 2px,
-    white 4px
-  );
-  -webkit-background-clip: text;
-  top: 0px;
+  font-family: 'Cambay', sans-serif;
+  font-size: 4vw;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.03em;
+}
+
+.deconstructed > div {
+  position: absolute;
+  top: 0;
   left: 0;
-  z-index: -1;
-  transition: 1s;
+  right: 0;
+  bottom: 0;
+  color: #ffff64;
+  pointer-events: none;
 }
 
-.type1::after {
-  content: "PRATHAM";
-  position: absolute;
-  color: transparent;
-  background-image: repeating-linear-gradient(
-    135deg,
-    transparent 0,
-    transparent 2px,
-    white 2px,
-    white 4px
-  );
-  -webkit-background-clip: text;
-  top: 0px;
-  left: 0px;
-  transition: 1s;
+.deconstructed > div:nth-child(1) {
+  -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+  mask-image: linear-gradient(black 25%, transparent 25%);
+  animation: deconstructed1 5s infinite;
 }
 
-.type1:hover:before {
-  top: 10px;
-  left: 10px;
+.deconstructed > div:nth-child(2) {
+  -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+  mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+  animation: deconstructed2 5s infinite;
 }
 
-.type1:hover:after {
-  top: -10px;
-  left: -10px;
+.deconstructed > div:nth-child(3) {
+   -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+  mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+  animation: deconstructed3 5s infinite;
+}
+
+.deconstructed > div:nth-child(4) {
+   -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+  mask-image: linear-gradient(transparent 75%, black 75%);
+  animation: deconstructed4 5s infinite;
+}
+
+@keyframes deconstructed1 {
+  0% {
+    transform: translateX(100%);
+  }
+  26% {
+    transform: translateX(0%);
+  }
+  83% {
+    transform: translateX(-0.1%);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes deconstructed2 {
+  0% {
+    transform: translateX(100%);
+  }
+  24% {
+    transform: translateX(0.5%);
+  }
+  82% {
+    transform: translateX(-0.2%);
+  }
+  100% {
+    transform: translateX(-125%);
+  }
+}
+
+@keyframes deconstructed3 {
+  0% {
+    transform: translateX(100%);
+  }
+  22% {
+    transform: translateX(0%);
+  }
+  81% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-130%);
+  }
+}
+
+@keyframes deconstructed4 {
+  0% {
+    transform: translateX(100%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-135%);
+  }
 }
