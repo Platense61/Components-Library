@@ -4,6 +4,22 @@ body{
   padding: 2rem 0;
 
 }
+
+:root {
+  --shadow-color: #FF9E9E;
+  --shadow-color-light: white;
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
 p{
   text-align: center;
   margin-bottom: 3em;
@@ -302,7 +318,7 @@ p {
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
 body{
-  background:black;
+  background:grey;
 }
 
 .pop-wrapper{
@@ -322,10 +338,6 @@ body{
 }
 
 /* typeography 3 */
-:root {
-  --shadow-color: #FF9E9E;
-  --shadow-color-light: white;
-}
 
 .logo-1 {
   flex-basis: 50%;
@@ -361,7 +373,7 @@ body{
 .deconstructed {
   position: relative;
   margin: auto;
-  height: 0.71em;
+  height: 1em;
   color: transparent;
   font-family: 'Cambay', sans-serif;
   font-size: 4vw;
@@ -462,4 +474,79 @@ body{
   100% {
     transform: translateX(-135%);
   }
+}
+
+/* media card styles below */
+.media-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box p {
+    color: gold;
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;
+}
+
+.media-img {
+    float: right;
+}
+
+.orange {
+    border-top: 3px solid green;
+}
+
+.box h2 {
+    color: gold;
+    font-weight: var(--weight3);
+}
+    .box {
+        width: 20%;
+
+    }
+
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+/* Media card #2 */
+.media-image1 {
+  width: 30%;
+  height: 100%;
+  object-fit:cover;
+
+  -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+
+  transform-origin:center;
+  transform:perspective(800px) rotateY(25deg);
+  transition:0.5s;
+}
+.img-container {
+  max-width:600px;
+  max-height:350px;
+
+
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+
+}
+.img-container:hover img {
+  opacity:0.3;
+}
+.img-container img:hover {
+  transform:perspective(800px)       rotateY(0deg);
+  opacity:1;
 }
