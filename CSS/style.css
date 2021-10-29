@@ -2,8 +2,9 @@ body{
   width: 98vw;
   margin: auto;
   padding: 2rem 0;
-
-}
+  background-color: #100e0f;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%235b5760' fill-opacity='0.47'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
 
 :root {
   --shadow-color: #FF9E9E;
@@ -23,6 +24,7 @@ body{
 p{
   text-align: center;
   margin-bottom: 3em;
+  color: white;
 }
 
 header{
@@ -31,6 +33,7 @@ header{
   align-items: center;
   padding: 1rem;
   gap: 100px;
+  color: white;
 
 }
 
@@ -48,16 +51,63 @@ header{
                         border-radius: 15px;
                         height: 3rem;
                         background-color: gray;
-                        justify-content: space-between;
+                        justify-content: space-around;
 
                         /* Reset styles */
                         list-style-type: none;
-                        margin: 0;
+                        margin: 0px;
                     }
 
 .container__item--right {
   /* Sticks to the right */
   margin-left: auto;
+}
+.container li{
+  padding: 20px;
+}
+
+.container li {
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  padding: 16px;
+  width: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+.container a{
+  text-decoration: none;
+  color: black;
+}
+
+.container li{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.container li:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.container li:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.container li:hover:after {
+  opacity: 1;
+  right: 10px;
 }
 
 /* Dropdown navigation menu, second item*/
@@ -73,7 +123,9 @@ header{
                         /* Reset list styles */
                         list-style-type: none;
                         margin: 50px;
+                        margin-bottom: 200px;
                         padding: 0;
+                        background-color: white;
                     }
 
                     .dropdown li {
@@ -122,6 +174,9 @@ header{
                     .dropdown li:hover > ul {
                         display: block;
                     }
+.lvl1, .lvl2{
+  background-color: white;
+}
 
 /*Buttons 1*/
 .button-1 {
@@ -317,10 +372,6 @@ p {
 /* Typography 2*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
-body{
-  background:grey;
-}
-
 .pop-wrapper{
   flex-basis: 50%;
 }
@@ -492,6 +543,7 @@ body{
     box-shadow: 0px 30px 40px -20px var(--grayishBlue);
     padding: 30px;
     margin: 20px;
+    background-color: white;
 }
 
 .media-img {
@@ -505,6 +557,9 @@ body{
 .box h2 {
     color: gold;
     font-weight: var(--weight3);
+}
+.box p{
+  color: #0A5D00;
 }
     .box {
         width: 20%;
